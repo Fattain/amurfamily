@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="modalId"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">Написать нам</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="" id="form-response">
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-6">
+                  <div class="input-box">
+                    <label for="firstname">Имя:</label>
+                    <input
+                      name="firstname"
+                      data-ru-lang="true"
+                      data-min-length="2"
+                      data-required="true"
+                      type="text"
+                      class="w-100"
+                      id="firstname"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="input-box">
+                    <label for="phone">Номер телефона:</label>
+                    <input
+                      data-min-length-phone="11"
+                      data-phone="true"
+                      maxlength="11"
+                      data-required="true"
+                      class="w-100"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="без +"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <span>Сообщение:</span>
+                <div class="col-12">
+                  <textarea
+                    cols="50"
+                    rows="5"
+                    class="w-100"
+                    id="response"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn cancelbutton"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+              <button type="submit" class="btn submitbutton">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="mt-2">
+        <div class="d-flex align-items-center header_wrapper">
+          <div class="headerleft container-fluid">
+            <div class="row toprow justify-content-center">
+              <div
+                class="col-12 my-3 social d-flex align-items-center justify-content-evenly"
+              >
+                <a href="https://vk.com" target="_blank" class="vk"> </a>
+                <a href="https://twitter.com" target="_blank" class="twit"></a>
+                <a href="https://facebook.com" target="_blank" class="fb"></a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  class="insta"
+                ></a>
+                <a href="https://ok.ru" target="_blank" class="ok"></a>
+              </div>
+            </div>
+            <div class="row bottomrow">
+              <button class="burgermenu"></button>
+              <div
+                class="bottomrowwrapper d-flex justify-content-end align-items-center"
+              >
+                <div class="col-lg-4 w-25 text-center">
+                  <a href="">О портале</a>
+                </div>
+                <div class="col-lg-4 w-25 text-center">
+                  <a href="">Всё для семьи</a>
+                </div>
+                <div class="col-lg-4 w-25 text-center">
+                  <a href="">События</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="logo">
+            <a href="index.html"><img src="./svg/logo1.svg" alt="logo" /></a>
+          </div>
+          <div class="headerright container-fluid">
+            <div class="row toprow">
+              <div class="col-12 my-3 d-flex justify-content-center button">
+                <form>
+                  <input
+                    type="button"
+                    value="Написать нам"
+                    class="buttonform"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalId"
+                  />
+                </form>
+              </div>
+            </div>
+            <div class="row bottomrow">
+              <button class="searchmenu"></button>
+              <div
+                class="bottomrowwrapper d-flex justify-content-start align-items-center"
+              >
+                <div class="col-lg-4 w-25 text-center">
+                  <a class="d-inline-block" href="">Вопросы</a>
+                </div>
+                <div class="col-lg-4 w-25 text-center">
+                  <a href="">Контакты</a>
+                </div>
+                <div
+                  class="col-lg-4 w-25 text-center d-flex justify-content-center search"
+                >
+                  <button class="search_toggle"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="main carousel">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-pause="false"
+            data-bs-touch="true"
+            data-bs-interval="3000"
+          >
+            <div class="carousel-indicators justify-content-start">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active c-item">
+                <img
+                  src="./img/carousel1.png"
+                  class="d-block w-100 c-img"
+                  alt="Родители и ребёнок на фоне зимней ёлки"
+                />
+                <div class="carousel-caption mb-4 w-25">
+                  <p class="title fs-1">
+                    Вся информация по развитию и поддержке семьи в одном месте.
+                  </p>
+                  <p class="fs-6 description">
+                    при поддержке правительства Амурской области
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img
+                  src="./svg/carousel2.svg"
+                  class="d-block w-100 c-img"
+                  alt="нарисованная семья, украшающая интерьер зимними игрушками"
+                />
+                <div class="carousel-caption mb-4 w-25">
+                  <p class="title n2">
+                    <span class="firstrowtext">С наступающим</span
+                    ><span class="secondrowtext">2020</span
+                    ><span class="exclamationmark">!</span>
+                  </p>
+                  <p class="fs-6 description n2">
+                    Здоровья и любви Вам в новом году!
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img
+                  src="./img/carousel3.png"
+                  class="d-block w-100 c-img"
+                  alt="руки младенца на фоне женских рук"
+                />
+                <div class="carousel-caption mb-4 w-25">
+                  <p class="title n2">
+                    Многодетные семьи получат помощь на рождение детей
+                  </p>
+                  <p class="fs-6 description n3">
+                    Уже со следующего месяца многодетные семьи будут получать
+                    увеличенные пособия на детей. На заседании ...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-next w-100"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="info mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <fieldset>
+                  <legend class="text-center legend1">57</legend>
+                  <span>семьям, обратившимся к нам, мы помогли</span>
+                </fieldset>
+              </div>
+              <div class="col">
+                <fieldset>
+                  <legend class="text-center legend2">24/7</legend>
+                  <span>мы принимаем обращения ежедневно</span>
+                </fieldset>
+              </div>
+              <div class="col">
+                <fieldset class="fieldset">
+                  <legend
+                    class="text-center justify-content-center d-flex legend3"
+                  >
+                    <span class="smalltext">более</span>
+                    100
+                  </legend>
+                  <span>квалифицированных<br />сотрудников</span>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forFamily my-5">
+          <div class="container">
+            <div class="row">
+              <div class="col justify-content-start left">
+                <span class="familyTitle">Всё для семьи</span>
+              </div>
+              <div
+                class="col d-flex justify-content-end align-items-center right"
+              >
+                <span id="all" class="active text changeButton mx-3">Всё</span>
+                <span id="important" class="text changeButton mx-3"
+                  >Важное</span
+                >
+                <span id="news" class="text changeButton mx-3">Новости</span>
+                <span id="useful" class="text changeButton mx-3">Полезное</span>
+                <button
+                  id="left"
+                  type="button"
+                  class="leftarrow sliderleftbtn"
+                ></button>
+                <button
+                  id="right"
+                  type="button"
+                  class="rightarrow sliderrightbtn"
+                ></button>
+              </div>
+            </div>
+            <div class="row dropdownbutton mt-2">
+              <div class="dropdown w-100 p-0 m-0">
+                <button
+                  id="all"
+                  class="dropbutton currentdrop dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Всё
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <button
+                      id="news"
+                      class="dropdown-item changeButton"
+                      href="#"
+                    >
+                      Новости
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="useful"
+                      class="dropdown-item changeButton"
+                      href="#"
+                    >
+                      Полезное
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="important"
+                      class="dropdown-item changeButton"
+                      href="#"
+                    >
+                      Важное
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="all"
+            class="container mt-5 d-flex justify-content-center cards active"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card1.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="семья на лыжном курорте"
+                    />
+                    <div class="card-body">
+                      <p class="card-title">
+                        Семейные ценности и меры поддежки семьи
+                      </p>
+                      <p class="card-text">
+                        Постоянный количественный рост определил дальнейшее
+                        развитие!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #b5ac3a">
+                        Семья и здоровье
+                      </p>
+                      <p class="card-text">
+                        Экономическая повестка сегодняшнего дня станет частью
+                        наших традиций
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #d68f32">
+                        Семейный досуг и спорт
+                      </p>
+                      <p class="card-text">
+                        Инцидент не исчерпан: героям были возданы
+                        соответствующие почести!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители с двумя маленькими детьми в лесу"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #b5ac3a">
+                        Семья и здоровье
+                      </p>
+                      <p class="card-text">
+                        Экономическая повестка сегодняшнего дня станет частью
+                        наших традиций
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card1.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="пятеро детей играют у снеговика зимой"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #d68f32">
+                        Семейный досуг и спорт
+                      </p>
+                      <p class="card-text">
+                        Инцидент не исчерпан: героям были возданы
+                        соответствующие почести!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="important"
+            class="container mt-5 d-flex justify-content-center cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="семья на лыжном курорте"
+                    />
+                    <div class="card-body">
+                      <p class="card-title">
+                        Семейные ценности и меры поддежки семьи
+                      </p>
+                      <p class="card-text">
+                        Постоянный количественный рост определил дальнейшее
+                        развитие!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители с двумя маленькими детьми в лесу"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #b5ac3a">
+                        Семья и здоровье
+                      </p>
+                      <p class="card-text">
+                        Экономическая повестка сегодняшнего дня станет частью
+                        наших традиций
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card2.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="пятеро детей играют у снеговика зимой"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #d68f32">
+                        Семейный досуг и спорт
+                      </p>
+                      <p class="card-text">
+                        Инцидент не исчерпан: героям были возданы
+                        соответствующие почести!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="news"
+            class="container mt-5 d-flex justify-content-center cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="семья на лыжном курорте"
+                    />
+                    <div class="card-body">
+                      <p class="card-title">
+                        Семейные ценности и меры поддежки семьи
+                      </p>
+                      <p class="card-text">
+                        Постоянный количественный рост определил дальнейшее
+                        развитие!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители с двумя маленькими детьми в лесу"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #b5ac3a">
+                        Семья и здоровье
+                      </p>
+                      <p class="card-text">
+                        Экономическая повестка сегодняшнего дня станет частью
+                        наших традиций
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card3.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="пятеро детей играют у снеговика зимой"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #d68f32">
+                        Семейный досуг и спорт
+                      </p>
+                      <p class="card-text">
+                        Инцидент не исчерпан: героям были возданы
+                        соответствующие почести!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="useful"
+            class="container mt-5 d-flex justify-content-center cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="семья на лыжном курорте"
+                    />
+                    <div class="card-body">
+                      <p class="card-title">
+                        Семейные ценности и меры поддежки семьи
+                      </p>
+                      <p class="card-text">
+                        Постоянный количественный рост определил дальнейшее
+                        развитие!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители целуют ребёнка в щёки"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #ed564a">
+                        Защита прав и законных интересов детей
+                      </p>
+                      <p class="card-text">Чистый разум не скован границами</p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="родители с двумя маленькими детьми в лесу"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #b5ac3a">
+                        Семья и здоровье
+                      </p>
+                      <p class="card-text">
+                        Экономическая повестка сегодняшнего дня станет частью
+                        наших традиций
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <img
+                      src="./img/card4.png"
+                      class="card-img-top"
+                      style="background: #c4c4c4"
+                      alt="пятеро детей играют у снеговика зимой"
+                    />
+                    <div class="card-body">
+                      <p class="card-title" style="background: #d68f32">
+                        Семейный досуг и спорт
+                      </p>
+                      <p class="card-text">
+                        Инцидент не исчерпан: героям были возданы
+                        соответствующие почести!
+                      </p>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mt-5 d-flex justify-content-center button">
+            <form>
+              <input type="button" value="Посмотреть всё" class="buttonform" />
+            </form>
+          </div>
+        </div>
+
+        <div class="faq my-5">
+          <div class="container">
+            <div class="row faq-row faq">
+              <div class="col d-flex justify-content-start left">
+                <span>Вопрос - Ответ</span>
+              </div>
+              <div
+                class="col d-flex align-items-end justify-content-end question right"
+              >
+                <div class="greenborder d-flex align-items-center mt-1">
+                  <input
+                    class="me-2"
+                    type="text"
+                    name="question"
+                    id="question"
+                    placeholder="Введите сюда ключевое слово вашего вопроса"
+                  />
+                  <button class="faq-search"></button>
+                </div>
+              </div>
+            </div>
+            <div class="row question mt-4 mb-0 pb-0">
+              <div class="col">
+                <span class="headline">Часто задаваемые вопросы</span>
+              </div>
+            </div>
+            <div class="container-fluid w-100 d-flex flex-wrap">
+              <div class="faq-container w-75">
+                <div class="questionswrapper">
+                  <div class="row questions mt-4">
+                    <div class="col d-flex">
+                      <span class="faq-title d-flex"
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?
+                      </span>
+                      <button class="downarrow"></button>
+                    </div>
+                  </div>
+                  <div class="row questions answer py-3 px-3 mb-3">
+                    <div class="col">
+                      <span
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="questionswrapper">
+                  <div class="row questions mt-4">
+                    <div class="col d-flex">
+                      <span class="faq-title d-flex"
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?
+                      </span>
+                      <button class="downarrow"></button>
+                    </div>
+                  </div>
+                  <div class="row questions answer py-3 px-3 mb-3">
+                    <div class="col">
+                      <span
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="questionswrapper">
+                  <div class="row questions mt-4">
+                    <div class="col d-flex">
+                      <span class="faq-title d-flex"
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?
+                      </span>
+                      <button class="downarrow"></button>
+                    </div>
+                  </div>
+                  <div class="row questions answer py-3 px-3 mb-3">
+                    <div class="col">
+                      <span
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="questionswrapper">
+                  <div class="row questions mt-4">
+                    <div class="col d-flex">
+                      <span class="faq-title d-flex"
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?
+                      </span>
+                      <button class="downarrow"></button>
+                    </div>
+                  </div>
+                  <div class="row questions answer py-3 px-3 mb-3">
+                    <div class="col">
+                      <span
+                        >Являясь всего лишь частью общей картины, сторонники
+                        тоталитаризма в науке формируют глобальную экономическую
+                        сеть и при этом - функционально разнесены на независимые
+                        элементы?</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container askform w-25 px-0">
+                <div class="form">
+                  <div class="ask">
+                    <div
+                      class="formtitle d-flex justify-content-center position-relative pt-5 mt-4"
+                    >
+                      <p>Наши специалисты готовы ответить на Ваши вопросы</p>
+                      <span class="position-absolute"></span>
+                    </div>
+
+                    <div class="formbutton pt-4 d-flex justify-content-center">
+                      <input
+                        type="button"
+                        value="Задать вопрос"
+                        class="buttonaskform"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalId"
+                        style="width: 200px; height: 45px"
+                      />
+                    </div>
+
+                    <div class="formsvg py-2 d-flex justify-content-center">
+                      <img
+                        src="./svg/askfamily.svg"
+                        class="card-img-top w-75 h-75"
+                        alt="нарисованная семья с ребенком"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faqlinkcontainer mt-3">
+              <a class="faqlink" href=""
+                >Смотреть все вопросы и ответы
+                <span></span>
+              </a>
+            </div>
+            <div class="container mt-3 px-0 askformsmall">
+              <div class="form w-100 h-100">
+                <div
+                  class="ask h-100 d-flex justify-content-around align-items-center"
+                >
+                  <div class="formsvg py-3 d-flex justify-content-center">
+                    <img
+                      src="./svg/askfamily.svg"
+                      class="card-img-top"
+                      alt="нарисованная семья с ребенком"
+                    />
+                  </div>
+                  <div
+                    class="formtitle d-flex justify-content-center position-relative"
+                  >
+                    <p>Наши специалисты готовы ответить на Ваши вопросы</p>
+                    <span class="position-absolute"></span>
+                  </div>
+
+                  <div class="formbutton d-flex justify-content-center">
+                    <input
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalId"
+                      value="Задать вопрос"
+                      class="buttonaskform"
+                      style="width: 200px; height: 45px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="events mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col justify-content-start left">
+                <span class="eventsTitle">События</span>
+              </div>
+              <div
+                class="col d-flex justify-content-end align-items-center right"
+              >
+                <span id="all" class="active text changeButton mx-3">Всё</span>
+                <span id="important" class="text changeButton mx-3"
+                  >Важное</span
+                >
+                <span id="news" class="text changeButton mx-3">Новости</span>
+                <span id="useful" class="text changeButton mx-3">Полезное</span>
+                <button class="leftarrow sliderleftbtn"></button>
+                <button class="rightarrow sliderrightbtn"></button>
+              </div>
+            </div>
+            <div class="row dropdownbutton mt-2">
+              <div class="dropdown w-100 p-0 m-0">
+                <button
+                  id="all"
+                  class="dropbutton currentdrop dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Всё
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <button
+                      id="news"
+                      class="dropdown-item changeButton"
+                      href="#"
+                    >
+                      Новости
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="useful"
+                      class="dropdown-item changeButton"
+                      href="#"
+                    >
+                      Полезное
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="important"
+                      class="dropdown-item changeButton"
+                      href="#"
+                    >
+                      Важное
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            id="all"
+            class="container mt-5 d-flex justify-content-center active cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card n1"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events1.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Известный инсайдер, в преддверии важного события,
+                          бодрит
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n2"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Британские учёные заявили, что объемы выросли
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n3"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Очевидцы сообщают, что слышали звон колоколов
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events1.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events1.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="important"
+            class="container mt-5 d-flex justify-content-center cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card n1"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Известный инсайдер, в преддверии важного события,
+                          бодрит
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n2"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Британские учёные заявили, что объемы выросли
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n3"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Очевидцы сообщают, что слышали звон колоколов
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events2.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="news"
+            class="container mt-5 d-flex justify-content-center cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card n1"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Известный инсайдер, в преддверии важного события,
+                          бодрит
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n2"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Британские учёные заявили, что объемы выросли
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n3"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Очевидцы сообщают, что слышали звон колоколов
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events3.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="useful"
+            class="container mt-5 d-flex justify-content-center cards"
+          >
+            <div id="carouselExample" class="carousel w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card n1"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Известный инсайдер, в преддверии важного события,
+                          бодрит
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n2"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Британские учёные заявили, что объемы выросли
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n3"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Очевидцы сообщают, что слышали звон колоколов
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card n4"
+                    style="min-width: 270px; min-height: 318px; cursor: pointer"
+                  >
+                    <div class="card-body">
+                      <div
+                        class="cardimage position-absolute top-50 start-50 translate-middle"
+                      >
+                        <img src="./img/events4.jpg" />
+                      </div>
+                      <div class="cardtext">
+                        <p class="card-text">
+                          Доблесть наших правозащитников оказалась чрезвычайно
+                          полезной
+                        </p>
+                      </div>
+                      <p class="card-date">23.12.2019г.</p>
+                      <div class="card-social">
+                        <a href="https://vk.com" target="_blank" class="vk-sm">
+                        </a>
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          class="twit-sm"
+                        ></a>
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          class="fb-sm"
+                        ></a>
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          class="insta-sm"
+                        ></a>
+                        <a
+                          href="https://ok.ru"
+                          target="_blank"
+                          class="ok-sm"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mt-5 d-flex justify-content-center button">
+            <form>
+              <input type="button" value="Посмотреть всё" class="buttonform" />
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <footer class="py-3">
+        <div class="col-12 col-md text-center">
+          <h5 class="text-white fs-6 pt-1">Управление ЗАГС Амурской области</h5>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
